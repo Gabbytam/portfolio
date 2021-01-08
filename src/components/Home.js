@@ -1,11 +1,18 @@
 import React from 'react'
 
+//component import
+import Intro from '../components/Intro'
+import About from '../components/About'
+import Projects from '../components/Projects'
+import Resume from '../components/Resume'
+
 function Home() {
     return (
-        <div>
-             <h1>Welcome, all you cool cats and kittens, to my Portfolio</h1>
-            Home page ya digggggg
-            
+        <div id='home'>
+            <Intro />
+            <About/>
+            <Projects/>
+            <Resume/>      
         </div>
     )
 }

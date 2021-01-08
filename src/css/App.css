@@ -3,18 +3,28 @@
 }
 
 body {
-  /* background-image: url(../css/images/reds/red4.jpg); */
-  /* background-image: url(../css/images/reds/red3.jpg); */
-  /* background-image: url(../css/images/greens/green10.jpg); */
-  /* background-image: url(../css/images/darks/teets.JPG); */
-  background-image: url(../css/images/ice/ice2.jpg);
+  /* background-image: url(../css/images/red4.jpg); */
   background-image: url(../css/images/mine/mine5.JPG);
-  background-image: url(../css/images/greens/green11.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: white;
   position: relative;
   min-height: 100vh;
-  
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#content-wrap {
+  padding-bottom: 4rem;    /* Footer height */
+  width: 100vw;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.608);
 }
 
 * {
@@ -24,6 +34,8 @@ body {
 nav {
   height: 7vw;
   width: 100%;
+  /* position: fixed; */
+  margin-bottom: 5vw;
 }
 
 #nav-content {
@@ -37,6 +49,7 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
+  text-decoration: none;
 }
 
 #nav-right {
@@ -59,7 +72,6 @@ nav {
 .name {
   margin: 0 auto;
   color: white;
-  text-decoration: none;
 
 }
 
@@ -79,7 +91,6 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
 }
 
 .about-info {
@@ -97,9 +108,10 @@ nav {
 footer {
   background: black;
   position: absolute;
-  bottom: 0;
+  /* bottom: 0; */
   width: 100%;
   height: 4rem;
+  /* background-position: bottom; */
 }
 
 #page-container {
@@ -107,9 +119,6 @@ footer {
   min-height: 100vh;
 }
 
-#content-wrap {
-  padding-bottom: 4rem;    /* Footer height */
-}
 
 #experience-inner {
   display: flex;
@@ -120,7 +129,7 @@ footer {
 
 .exp-item {
   width: 45%;
-  height: 25vw;
+  height: 15vw;
   background: greenyellow;
   color: rgb(117, 170, 150);
   margin-bottom: 5vw;
@@ -136,6 +145,10 @@ footer {
   /* fill: ; */
 }
 
+#resume-container {
+  width: 90%;
+}
+
 #resume-div, #skills-div, #experience-div, #edu-div  {
   display: flex;
   flex-direction: column;
@@ -143,4 +156,21 @@ footer {
 
 .footer-icon {
   margin: 1vw 2vw 0 2vw;
+}
+
+#intro {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#intro-left {
+  width: 60%;
+  display: flex;
+  align-self: flex-start;
+}
+
+#intro-right {
+  width: 40%;
 }
