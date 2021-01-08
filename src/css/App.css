@@ -12,6 +12,8 @@ body {
   background-image: url(../css/images/greens/green11.jpg);
   background-size: cover;
   color: white;
+  position: relative;
+  min-height: 100vh;
   
 }
 
@@ -97,7 +99,7 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 4rem;            /* Footer height */
+  height: 4rem;
 }
 
 #page-container {
@@ -106,5 +108,39 @@ footer {
 }
 
 #content-wrap {
-  padding-bottom: 2.5rem;    /* Footer height */
+  padding-bottom: 4rem;    /* Footer height */
+}
+
+#experience-inner {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.exp-item {
+  width: 45%;
+  height: 25vw;
+  background: greenyellow;
+  color: rgb(117, 170, 150);
+  margin-bottom: 5vw;
+}
+
+.devicon-git-plain {
+  max-width: 3em;
+  margin: 0 .5em 0 .5em;
+}
+
+/* if you want to change the original color */
+.devicon-git-plain path {
+  /* fill: ; */
+}
+
+#resume-div, #skills-div, #experience-div, #edu-div  {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-icon {
+  margin: 1vw 2vw 0 2vw;
 }
