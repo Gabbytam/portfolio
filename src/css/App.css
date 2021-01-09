@@ -130,7 +130,7 @@ footer {
 .exp-item {
   width: 45%;
   height: 15vw;
-  background: greenyellow;
+  background: rgba(255, 255, 255, 0.403);
   color: rgb(117, 170, 150);
   margin-bottom: 5vw;
 }
@@ -173,4 +173,48 @@ footer {
 
 #intro-right {
   width: 40%;
+}
+
+/* BUTTON STYLING */
+button {
+  color: #1D9AF2;
+  background-color: #292D3E;
+  border: 1px solid #1D9AF2;
+  border-radius: 4px;
+  padding: 0 15px;
+  cursor: pointer;
+  height:32px;
+  font-size:14px;
+  transition: all 0.2s ease-in-out;
+  }
+  button:hover {
+  box-shadow: 1px 1px #53a7ea, 2px 2px #53a7ea, 3px 3px #53a7ea;
+  transform: translateX(-3px);
+  }
+
+
+/* PROJECT COMPONENT STYLING  */
+#projects {
+  width: 90%;
+
+}
+#project-component {
+  width: 50%;
+  height: 25vw;
+  background:rgba(255, 255, 255, 0.156);
+}
+
+#project-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+#project-img:hover {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+#project-text {
+  margin-top: -10vw;
 }
