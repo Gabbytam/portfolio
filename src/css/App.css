@@ -199,22 +199,15 @@ button {
 
 }
 #project-component {
-  width: 50%;
+  width: 100%;
   height: 25vw;
   background:rgba(255, 255, 255, 0.156);
+  background-size: cover; 
 }
 
 #project-img {
   width: 100%;
   height: 100%;
-  background-size: cover;
+
 }
 
-#project-img:hover {
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
-}
-
-#project-text {
-  margin-top: -10vw;
-}
