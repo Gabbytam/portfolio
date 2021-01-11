@@ -20,6 +20,10 @@ body {
   align-items: center;
 }
 
+#intro, #about, #projects, #resume-container {
+  margin: 10vw 0 10vw 0;
+}
+
 #content-wrap {
   padding-bottom: 4rem;    /* Footer height */
   width: 100vw;

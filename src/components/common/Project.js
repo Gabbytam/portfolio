@@ -1,13 +1,14 @@
 import React from 'react'
 
-function Project({ img, liveSiteUrl, githubUrl }) {
+function Project({ title, img, description, liveSiteUrl, githubUrl }) {
     const styling = {
         backgroundImage: `url(${img})`
     }
     return (
         <div id='project-component' style={styling}>
             <div></div>
-            <p>project description</p>
+            <h3>{title}</h3>
+            <p>{description}</p>
 
             <div>
                 <a href={liveSiteUrl} target='_blank' rel='noreferrer'> 
