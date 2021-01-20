@@ -5,19 +5,22 @@ function Project({ title, img, description, liveSiteUrl, githubUrl }) {
         backgroundImage: `url(${img})`
     }
     return (
-        <div id='project-component' style={styling}>
-            <div></div>
-            <h3>{title}</h3>
-            <p>{description}</p>
+        // <div id='project-component' style={styling}>
+        <div id='project-component'>
+            <img className='project-image' src={img}/>
+            <div className='project-info'>
+                <h3>{title}</h3>
+                <p>{description}</p>
 
-            <div>
-                <a href={liveSiteUrl} target='_blank' rel='noreferrer'> 
-                    <button>LIVE SITE</button>
-                </a>
+                <div>
+                    <a href={liveSiteUrl} target='_blank' rel='noreferrer'> 
+                        <button>LIVE SITE</button>
+                    </a>
 
-                <a href={githubUrl} target='_blank' rel='noreferrer'>
-                    <button>GIT HUB</button>
-                </a>
+                    <a href={githubUrl} target='_blank' rel='noreferrer'>
+                        <button>GIT HUB</button>
+                    </a>
+                </div>
             </div>
         </div>
     )

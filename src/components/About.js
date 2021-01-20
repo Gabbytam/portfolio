@@ -15,7 +15,7 @@ function About() {
                <div className='about-info'>
                 <h3>BESIDES DEVELOPING</h3>
                 <p className='about-text'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut pharetra sem, ut pellentesque enim. Maecenas ac odio quam. Aenean vestibulum nibh id arcu pulvinar posuere. Nullam ultrices rhoncus purus et venenatis. Vivamus ac magna quis tortor gravida scelerisque ut vitae urna. Curabitur egestas tortor lorem, nec rutrum turpis consequat sed. Morbi ante leo, auctor quis mauris id, bibendum vestibulum purus. Duis et dignissim lectus, nec feugiat ante. Fusce eget dui ornare, gravida dui in, faucibus arcu. Nulla aliquet aliquam neque vel consectetur. Donec eleifend imperdiet porttitor
+                When I am not coding it is likely I am out hiking. I have also made a hobby out of weightlifting and on days where I chose non-physical activity, I turn to cross-stitching. As I am still young, I have used my time to try out life in different locations! In the past calendar year I have lived in Northern California, New York City, Seattle, and Honolulu. I have grown a passion for road tripping and along the way, gotten into landscape photography. 
                 </p>
 
                </div>

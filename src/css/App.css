@@ -5,6 +5,7 @@
 body {
   /* background-image: url(../css/images/red4.jpg); */
   background-image: url(../css/images/mine/mine5.JPG);
+  background-image: url(../css/images/mine/mt2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -25,7 +26,7 @@ body {
 }
 
 #content-wrap {
-  padding-bottom: 4rem;    /* Footer height */
+  /* padding-bottom: 4rem;*/    /*Footer height */
   width: 100vw;
   height: 100%;
   background: rgba(0, 0, 0, 0.608);
@@ -46,6 +47,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  /* background-color: rgb(240, 167, 58); */
 }
 
 #nav-left {
@@ -63,7 +65,7 @@ nav {
 
 .nav-item {
   margin: 0 1em 0 1em;
-  font-size: 2.5vw;
+  font-size: 2.3vw;
   color: white;
   text-decoration: none;
 }
@@ -114,7 +116,7 @@ footer {
   position: absolute;
   /* bottom: 0; */
   width: 100%;
-  height: 4rem;
+  height: 10%;
   /* background-position: bottom; */
 }
 
@@ -133,10 +135,10 @@ footer {
 
 .exp-item {
   width: 45%;
-  height: 15vw;
-  background: rgba(255, 255, 255, 0.403);
-  color: rgb(117, 170, 150);
-  margin-bottom: 5vw;
+  /* height: 15vw; */
+  /* background: rgba(255, 255, 255, 0.403); */
+  color: rgb(255, 255, 255);
+  /* margin-bottom: 5vw; */
 }
 
 .devicon-git-plain {
@@ -147,6 +149,11 @@ footer {
 /* if you want to change the original color */
 .devicon-git-plain path {
   /* fill: ; */
+}
+
+#node-icon {
+  max-width: 5em;
+  margin-bottom: -1em;
 }
 
 #resume-container {
@@ -215,3 +222,41 @@ button {
 
 }
 
+.job-title {
+  margin-bottom: 1vh;
+}
+
+.job-bullet {
+  text-align: left;
+  /* display: none; */
+}
+
+/* image hover styling */
+.project-image {
+  width: 100%;
+  opacity: 0.3;
+
+}
+
+/* .project-image:hover {
+  opacity: 0.3;
+}
+
+.project-info {
+  visibility: hidden;
+}
+
+#project-component:hover .project-info {
+  visibility: visible;
+  background: pink;
+  color: black;
+} */
+
+#arrow {
+  margin: 0;
+}
+
+#arrow:hover {
+  color: rgb(249, 175, 121);
+  cursor: pointer;
+}
