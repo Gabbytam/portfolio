@@ -48,7 +48,7 @@ function Projects() {
         },
         career: {
           title: '.find(career)',
-          image: '/images/projects/hikehome.png',
+          image: '/images/projects/project3.png',
           liveSite: 'https://findcareer.surge.sh/',
           github: 'https://github.com/orgs/SFX818/teams/charoniles-angels/repositories',
           description: 'Collaborated with other students to create this web application that helps prospective software engineers in their job search. This app allows users to search for available jobs and keep track of the status of jobs saved. It also offers a way for users to keep track of the network they build, goals they set, and offers a notes section.'
@@ -56,13 +56,13 @@ function Projects() {
     }
     return (
         <div id='projects'>
-            <h1>Explore My Projects</h1>
+            <h1 id='projects-header'>Explore My Projects</h1>
             <Carousel responsive={responsive}>
-                <div><Project title = {projectInfo.uno.title} img={projectInfo.uno.image} description = {projectInfo.uno.description} liveSiteUrl = {projectInfo.uno.liveSite} githubUrl={projectInfo.uno.github}/></div>
-
+                <div><Project title = {projectInfo.career.title} img={projectInfo.career.image} description = {projectInfo.career.description} liveSiteUrl = {projectInfo.career.liveSite} githubUrl={projectInfo.career.github}/></div>
+                
                 <div><Project title = {projectInfo.hike.title} img={projectInfo.hike.image} description = {projectInfo.hike.description} liveSiteUrl = {projectInfo.hike.liveSite} githubUrl={projectInfo.hike.github}/></div>
 
-                <div>Project 3</div>
+                <div><Project title = {projectInfo.uno.title} img={projectInfo.uno.image} description = {projectInfo.uno.description} liveSiteUrl = {projectInfo.uno.liveSite} githubUrl={projectInfo.uno.github}/></div>
             </Carousel>
             
             

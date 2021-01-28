@@ -1,15 +1,20 @@
 import React from 'react'
 
+import '../css/stars.css'
+
 function Intro() {
     return (
         <div id='intro'>
+            <div id='background'></div>
+            <div id='midground'></div>
+            <div id='foreground'></div>
             <div id='intro-left'>
-                <h1>My Name is Gabrielle Tam and here is a lil bit about me. Here is some more intro info about me. Cool cool.</h1>
+                <h1>My name is Gabrielle Tam.</h1>
 
             </div>
 
             <div id='intro-right'>
-                <p>I am a software engineer.</p>
+                <p id='intro-text'>I am a software engineer.</p>
 
             </div>
             

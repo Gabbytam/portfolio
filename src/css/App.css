@@ -22,7 +22,9 @@ body {
 }
 
 #intro, #about, #projects, #resume-container {
-  margin: 10vw 0 10vw 0;
+  /* margin: 10vw 0 10vw 0; */
+  height: 100vh;
+  margin-top: 10vh;
 }
 
 #content-wrap {
@@ -39,9 +41,11 @@ body {
 nav {
   height: 7vw;
   width: 100%;
-  /* position: fixed; */
+  position: fixed;
   margin-bottom: 5vw;
 }
+
+nav
 
 #nav-content {
   display: flex;
@@ -54,8 +58,9 @@ nav {
   height: 7vw;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
   text-decoration: none;
+  padding-left: 3vh;
 }
 
 #nav-right {
@@ -68,7 +73,15 @@ nav {
   font-size: 2.3vw;
   color: white;
   text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all ease 0.6s;
+  /* transition: all ease-in-out 0.7s; */
 }
+
+.nav-item:hover {
+  border-color:white;
+}
+
 
 #logo {
   height: 3em;
@@ -146,10 +159,10 @@ footer {
   margin: 0 .5em 0 .5em;
 }
 
-/* if you want to change the original color */
+/* if you want to change the original color
 .devicon-git-plain path {
-  /* fill: ; */
-}
+  fill: ;
+} */
 
 #node-icon {
   max-width: 5em;
@@ -260,3 +273,78 @@ button {
   color: rgb(249, 175, 121);
   cursor: pointer;
 }
+
+/* .resume-header {
+  text-align: left;
+} */
+
+#projects-header {
+  text-align: left;
+}
+
+#intro-text {
+  font-size: 1em;
+}
+
+form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  background: black;
+  outline: white;
+}
+
+#contact-form {
+  background: orange;
+  width: 40%;
+}
+
+/* messing around with stars */
+@keyframes STAR-MOVE {
+	from {
+    top: 0;
+	}
+	to { 
+    top: -2000px;
+	}
+}
+/* 
+#background {
+  background: url(../css/images/stars/midground.png) repeat 5% 5%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 100;
+	
+	animation-name: STAR-MOVE;
+	animation-duration: 200s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+#midground {
+
+	background: url(../css/images/stars/midground.png) repeat 20% 20%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 200;
+	
+	animation-name: STAR-MOVE;
+	animation-duration: 150s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+#foreground {
+	background: url(../css/images/stars/foreground.png) repeat 35% 35%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 300;
+	
+	animation-name: STAR-MOVE;
+	animation-duration: 100s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+} */
