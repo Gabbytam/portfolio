@@ -12,7 +12,7 @@ function Project({ title, img, description, liveSiteUrl, githubUrl }) {
                 <h3>{title}</h3>
                 <p>{description}</p>
 
-                <div>
+                <div id='site-links'>
                     <a href={liveSiteUrl} target='_blank' rel='noreferrer'> 
                         <button>LIVE SITE</button>
                     </a>

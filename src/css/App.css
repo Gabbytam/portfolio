@@ -129,8 +129,18 @@ footer {
   position: absolute;
   /* bottom: 0; */
   width: 100%;
-  height: 10%;
+  /* height: 10%; */
   /* background-position: bottom; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#footer-items {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  margin-bottom: 10vh;
 }
 
 #page-container {
@@ -200,7 +210,7 @@ footer {
 }
 
 /* BUTTON STYLING */
-button {
+site-links button {
   color: #1D9AF2;
   background-color: #292D3E;
   border: 1px solid #1D9AF2;
@@ -211,7 +221,7 @@ button {
   font-size:14px;
   transition: all 0.2s ease-in-out;
   }
-  button:hover {
+  site-links button:hover {
   box-shadow: 1px 1px #53a7ea, 2px 2px #53a7ea, 3px 3px #53a7ea;
   transform: translateX(-3px);
   }
@@ -282,69 +292,190 @@ button {
   text-align: left;
 }
 
+#contact-header {
+  font-size: 2em;
+}
+
 #intro-text {
   font-size: 1em;
 }
 
-form {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-}
+/* !!!!! contact form styling */
 
-input, textarea {
-  background: black;
-  outline: white;
+#contact-items {
+  width: 40%;
 }
 
 #contact-form {
-  background: orange;
-  width: 40%;
+  width: 45%;
 }
 
-/* messing around with stars */
-@keyframes STAR-MOVE {
-	from {
-    top: 0;
-	}
-	to { 
-    top: -2000px;
-	}
-}
-/* 
-#background {
-  background: url(../css/images/stars/midground.png) repeat 5% 5%;
-	position: absolute;
-	top: 0; left: 0; right: 0; bottom: 0;
-	z-index: 100;
-	
-	animation-name: STAR-MOVE;
-	animation-duration: 200s;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
+ form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  height: 100%;
+  justify-content: center;
 }
 
-#midground {
-
-	background: url(../css/images/stars/midground.png) repeat 20% 20%;
-	position: absolute;
-	top: 0; left: 0; right: 0; bottom: 0;
-	z-index: 200;
-	
-	animation-name: STAR-MOVE;
-	animation-duration: 150s;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
+textarea {
+  height: 50%;
 }
 
-#foreground {
-	background: url(../css/images/stars/foreground.png) repeat 35% 35%;
-	position: absolute;
-	top: 0; left: 0; right: 0; bottom: 0;
-	z-index: 300;
-	
-	animation-name: STAR-MOVE;
-	animation-duration: 100s;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-} */
+input {
+  height: 10%;
+}
+
+.form-control, textarea {
+  /* max-width: 400px; */
+  max-width: 100%;
+  background-color: #000;
+  color: #fff;
+  letter-spacing: 1px;
+  margin: 1em 0 1em 0;
+}
+
+.send-button {
+  /* margin-top: 15px; */
+  /* height: 34px;
+  width: 400px; */
+  height: 2em;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+  /* background: orange; */
+}
+
+.button {
+  /* width: 400px;
+  height: 34px; */
+  transition: all .2s ease-in-out;
+}
+
+.send-text {
+  display: block;
+  margin-top: 10px;
+  letter-spacing: 2px;
+}
+
+.button:hover {
+  transform: translate3d(0px, -20px, 0px);
+}
+
+.form-control, textarea {
+  max-width: 400px;
+  background-color: #000;
+  color: #fff;
+  letter-spacing: 1px;
+  border-color: #BBBBBB;
+  border-width: 1px;
+  border-radius: 5px;
+  
+}
+
+
+/* Social Media Icons */
+
+
+.social-media-list {
+  position: relative;
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0; 
+}
+
+.social-media-list li a {
+  color: #fff;
+  width: 5px;
+}
+
+.social-media-list li {
+  position: relative; 
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 10px 10px;
+  line-height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgb(27,27,27);
+  cursor: pointer; 
+  transition: all .2s ease-in-out;
+}
+
+.social-media-list li:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px #fff;
+  transition: all .2s ease-in-out;
+}
+
+.social-media-list li:hover {
+  background-color: #fff; 
+}
+
+.social-media-list li:hover:after {
+  opacity: 1;  
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+}
+
+.social-media-list li:hover a {
+  color: #000;
+}
+
+/* Location, Phone, Email Section */
+.contact-list {
+  list-style-type: none;
+  text-align: left;
+  margin: 0 auto;
+  padding: 0;
+  
+}
+
+.list-item {
+  line-height: 4;
+  color: #aaa;
+  /* display: flex;
+  justify-content: space-between; */
+}
+
+.contact-text {
+  letter-spacing: 1.9px;
+  color: #bbb;
+}
+
+.place, .phone, .gmail {
+  margin-left: 3em;
+}
+
+
+.contact-text a {
+  color: #bbb;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-icon {
+  width: 45%;
+  padding-top: 14px;
+}
+
+
+hr {
+  width: 100%;
+  border-color: rgba(255,255,255,.8);
+}

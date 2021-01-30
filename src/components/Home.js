@@ -12,7 +12,7 @@ function Home() {
             <Intro />
             <About/>
             <Projects/>
-            <Resume/>      
+            <Resume/>    
         </div>
     )
 }

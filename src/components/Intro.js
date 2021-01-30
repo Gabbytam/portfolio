@@ -1,6 +1,6 @@
 import React from 'react'
 
-import '../css/stars.css'
+// import '../css/stars.css'
 
 function Intro() {
     return (
