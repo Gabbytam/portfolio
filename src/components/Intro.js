@@ -9,12 +9,12 @@ function Intro() {
             <div id='midground'></div>
             <div id='foreground'></div>
             <div id='intro-left'>
-                <h1>My name is Gabrielle Tam.</h1>
+                <h1>Hi, I'm <span id='name'>Gabrielle Tam</span> and welcome to my portfolio.</h1>
 
             </div>
 
             <div id='intro-right'>
-                <p id='intro-text'>I am a software engineer.</p>
+                <p id='intro-text'>I am a software engineer who has found a passion in problem solving.</p>
 
             </div>
             

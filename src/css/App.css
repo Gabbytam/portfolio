@@ -4,7 +4,7 @@
 
 body {
   /* background-image: url(../css/images/red4.jpg); */
-  background-image: url(../css/images/mine/mine5.JPG);
+  /* background-image: url(../css/images/mine/mine5.JPG); */
   background-image: url(../css/images/mine/mt2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -12,6 +12,22 @@ body {
   color: white;
   position: relative;
   min-height: 100vh;
+  background-position-y: 65%;
+}
+
+
+#intro {
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+  /* padding: 10vh; */
+  margin-left: 10vw;
+  margin-top: -10vh;
+  height: 100vh;
+}
+
+#name {
+  color: black;
 }
 
 #home {
@@ -21,10 +37,10 @@ body {
   align-items: center;
 }
 
-#intro, #about, #projects, #resume-container {
-  /* margin: 10vw 0 10vw 0; */
-  height: 100vh;
-  margin-top: 10vh;
+#about, #projects, #resume-container {
+  margin: 10vh 0 10vh 0;
+  padding-top: 10vh;
+  /* margin-top: 10vh; */
 }
 
 #content-wrap {
@@ -39,19 +55,26 @@ body {
 }
 
 nav {
+  top: 0;
+  left: 0;
   height: 7vw;
   width: 100%;
   position: fixed;
-  margin-bottom: 5vw;
+  /* margin-bottom: 5vw; */
+  z-index: 1;
+  background-image: url(../css/images/mine/mt2.jpg);
+  background-position-y: 10%;
+  background-size: cover;
+  
 }
 
-nav
 
 #nav-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   /* background-color: rgb(240, 167, 58); */
+  background: rgba(0, 0, 0, 0.608);
 }
 
 #nav-left {
@@ -210,7 +233,7 @@ footer {
 }
 
 /* BUTTON STYLING */
-site-links button {
+#site-links button {
   color: #1D9AF2;
   background-color: #292D3E;
   border: 1px solid #1D9AF2;
@@ -221,7 +244,7 @@ site-links button {
   font-size:14px;
   transition: all 0.2s ease-in-out;
   }
-  site-links button:hover {
+  #site-links button:hover {
   box-shadow: 1px 1px #53a7ea, 2px 2px #53a7ea, 3px 3px #53a7ea;
   transform: translateX(-3px);
   }
@@ -257,30 +280,58 @@ site-links button {
 /* image hover styling */
 .project-image {
   width: 100%;
-  opacity: 0.3;
-
-}
-
-/* .project-image:hover {
-  opacity: 0.3;
 }
 
 .project-info {
-  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  position: absolute;
+  /* display: none; */
+  z-index: -1;
+} 
+
+#tech {
+  display: flex;
 }
 
-#project-component:hover .project-info {
-  visibility: visible;
-  background: pink;
-  color: black;
-} */
+#tech li {
+  border-radius: 20px;
+  list-style-position:inside;
+  border: 3px solid rgb(255, 197, 73);
+  background: rgb(255, 215, 128);
+  padding: .5em .5em .5em .5em;
+  list-style-type: none;
+}
+
+.project-image:hover {
+  opacity: 0.3;
+  z-index: -1;
+}
+
+/* !!!!!FIGURE OUT WHY THESE DONT WORK */
+.project-info:hover {
+  cursor: pointer;
+  background: orange;
+}
+
+.project-image:hover .project-info {
+  background: blue;
+  z-index: 1;
+  
+} 
+
+
+.react-multi-carousel-list li {
+  margin: 0 1vw 0 1vw;
+}
 
 #arrow {
   margin: 0;
 }
 
 #arrow:hover {
-  color: rgb(249, 175, 121);
+  color: rgb(252, 196, 156);
   cursor: pointer;
 }
 
@@ -301,9 +352,10 @@ site-links button {
 }
 
 /* !!!!! contact form styling */
+/* some parts taken from: https://codepen.io/bobbykorec/pen/qOGbyr */
 
 #contact-items {
-  width: 40%;
+  width: 45%;
 }
 
 #contact-form {
@@ -358,7 +410,7 @@ input {
 }
 
 .button:hover {
-  transform: translate3d(0px, -20px, 0px);
+  transform: translate3d(0px, -25px, 0px);
 }
 
 .form-control, textarea {
@@ -374,7 +426,6 @@ input {
 
 
 /* Social Media Icons */
-
 
 .social-media-list {
   position: relative;
@@ -420,6 +471,8 @@ input {
 
 .social-media-list li:hover {
   background-color: #fff; 
+  /* changed this from white to black because I moved the a tag to the outside w/ li inside */
+  color: black;
 }
 
 .social-media-list li:hover:after {
@@ -457,6 +510,9 @@ input {
   margin-left: 3em;
 }
 
+#email {
+  overflow: scroll;
+}
 
 .contact-text a {
   color: #bbb;

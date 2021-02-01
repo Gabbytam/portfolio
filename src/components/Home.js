@@ -9,7 +9,6 @@ import Resume from '../components/Resume'
 function Home() {
     return (
         <div id='home'>
-            <Intro />
             <About/>
             <Projects/>
             <Resume/>    

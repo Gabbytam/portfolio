@@ -1,16 +1,30 @@
 import React from 'react'
 
-function Project({ title, img, description, liveSiteUrl, githubUrl }) {
+function Project({ title, img, description, liveSiteUrl, githubUrl, skills }) {
     const styling = {
         backgroundImage: `url(${img})`
     }
+
+    const displayTech = (skills) => {
+        return skills.map(skill => (
+            <li>
+                {skill}
+            </li>
+        ))
+
+    }
+
     return (
         // <div id='project-component' style={styling}>
         <div id='project-component'>
-            <img className='project-image' src={img}/>
+            {/* <img className='project-image' src={img}/> */}
             <div className='project-info'>
                 <h3>{title}</h3>
                 <p>{description}</p>
+                <ul id= 'tech'>
+                    {displayTech(skills)}
+                </ul>
+
 
                 <div id='site-links'>
                     <a href={liveSiteUrl} target='_blank' rel='noreferrer'> 
@@ -22,6 +36,7 @@ function Project({ title, img, description, liveSiteUrl, githubUrl }) {
                     </a>
                 </div>
             </div>
+            <img className='project-image' src={img}/>
         </div>
     )
 }
