@@ -1,9 +1,11 @@
 import React from 'react'
 
 
+
 //component import
 import Project from '../components/common/Project'
 
+import ImageGallery from 'react-image-gallery';
 //import carousel from package
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -58,22 +60,52 @@ function Projects() {
           tech: ['React', 'Node.js', 'Mongoose', 'Mongo']
       }
     }
+
+    const showInfo = (proj) => {
+      proj = proj.originalTitle;
+        return <Project
+          title = {projectInfo[proj].title} img={projectInfo[proj].image} description = {projectInfo[proj].description} liveSiteUrl = {projectInfo[proj].liveSite} githubUrl={projectInfo[proj].github} skills = {projectInfo[proj].tech}
+        />
+    }
+
+    const images = [
+      {
+        original: '/images/projects/project3.png',
+        thumbnail: '/images/projects/project3.png',
+        originalClass: 'carousel-img',
+        originalTitle: 'career'
+      },
+      {
+        original: '/images/projects/hikehome.png',
+        thumbnail: '/images/projects/hikehome.png',
+        originalClass: 'carousel-img',
+        originalTitle: 'hike',
+      },
+      {
+        original: '/images/projects/uno.png',
+        thumbnail: '/images/projects/uno.png',
+        originalClass: 'carousel-img',
+        originalTitle: 'uno',
+      },
+    ];
     return (
         <div id='projects'>
             <h1 id='projects-header'>Explore My Projects</h1>
-            <Carousel responsive={responsive}>
+            <Carousel responsive={responsive} >
                 <div><Project title = {projectInfo.career.title} img={projectInfo.career.image} description = {projectInfo.career.description} liveSiteUrl = {projectInfo.career.liveSite} githubUrl={projectInfo.career.github} skills = {projectInfo.career.tech}/></div>
                 
                 <div><Project title = {projectInfo.hike.title} img={projectInfo.hike.image} description = {projectInfo.hike.description} liveSiteUrl = {projectInfo.hike.liveSite} githubUrl={projectInfo.hike.github} skills = {projectInfo.hike.tech}/></div>
 
                 <div><Project title = {projectInfo.uno.title} img={projectInfo.uno.image} description = {projectInfo.uno.description} liveSiteUrl = {projectInfo.uno.liveSite} githubUrl={projectInfo.uno.github} skills = {projectInfo.uno.tech}/></div>
             </Carousel>
+
+            <div id='carousel'>
+            <ImageGallery items={images} showFullscreenButton={false} showPlayButton={false} renderItem={showInfo} />
+            </div>
             
-            
+ 
         </div>
     )
 }
 
 export default Projects
-
-//carousel/click next of projects 

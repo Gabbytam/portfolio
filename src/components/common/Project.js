@@ -1,9 +1,6 @@
 import React from 'react'
 
 function Project({ title, img, description, liveSiteUrl, githubUrl, skills }) {
-    const styling = {
-        backgroundImage: `url(${img})`
-    }
 
     const displayTech = (skills) => {
         return skills.map(skill => (
@@ -15,9 +12,8 @@ function Project({ title, img, description, liveSiteUrl, githubUrl, skills }) {
     }
 
     return (
-        // <div id='project-component' style={styling}>
         <div id='project-component'>
-            {/* <img className='project-image' src={img}/> */}
+            
             <div className='project-info'>
                 <h3>{title}</h3>
                 <p>{description}</p>
@@ -36,7 +32,9 @@ function Project({ title, img, description, liveSiteUrl, githubUrl, skills }) {
                     </a>
                 </div>
             </div>
+
             <img className='project-image' src={img}/>
+            
         </div>
     )
 }
