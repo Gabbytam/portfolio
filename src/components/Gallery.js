@@ -1,38 +1,11 @@
 import React from 'react'
 
+import ImageGallery from 'react-image-gallery';
 
+import Project from '../components/common/Project';
 
-//component import
-import Project from '../components/common/Project'
-import Gallery from '../components/Gallery'
+function Gallery() {
 
-//import carousel from package
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-
-function Projects() {
-    //variable for sizing the carousel component 
-    const responsive = {
-        superLargeDesktop: {
-          // the naming can be any, depends on you.
-          breakpoint: { max: 4000, min: 3000 },
-          items: 4
-        },
-        desktop: {
-          breakpoint: { max: 3000, min: 1024 },
-          items: 2
-        },
-        tablet: {
-          breakpoint: { max: 1024, min: 464 },
-          items: 2
-        },
-        mobile: {
-          breakpoint: { max: 464, min: 0 },
-          items: 1
-        }
-      };
-    //have an object of all the info for my 3 projects 
-    //map through that and create a Project component for each one
     const projectInfo = {
         uno: {
             title: 'UNO',
@@ -61,23 +34,38 @@ function Projects() {
       }
     }
 
+    const showInfo = (proj) => {
+        proj = proj.originalTitle;
+          return <Project
+            title = {projectInfo[proj].title} img={projectInfo[proj].image} description = {projectInfo[proj].description} liveSiteUrl = {projectInfo[proj].liveSite} githubUrl={projectInfo[proj].github} skills = {projectInfo[proj].tech}
+          />
+      }
 
-
-
+      const images = [
+        {
+          original: '/images/projects/project3.png',
+          thumbnail: '/images/projects/project3.png',
+          originalClass: 'carousel-img',
+          originalTitle: 'career'
+        },
+        {
+          original: '/images/projects/hikehome.png',
+          thumbnail: '/images/projects/hikehome.png',
+          originalClass: 'carousel-img',
+          originalTitle: 'hike',
+        },
+        {
+          original: '/images/projects/uno.png',
+          thumbnail: '/images/projects/uno.png',
+          originalClass: 'carousel-img',
+          originalTitle: 'uno',
+        },
+      ];
     return (
-        <div id='projects'>
-            <h1 id='projects-header' className='animate__animated animate__slideInDown'>Explore My Projects</h1>
-            <Carousel responsive={responsive} >
-                <div><Project title = {projectInfo.career.title} img={projectInfo.career.image} description = {projectInfo.career.description} liveSiteUrl = {projectInfo.career.liveSite} githubUrl={projectInfo.career.github} skills = {projectInfo.career.tech}/></div>
-                
-                <div><Project title = {projectInfo.hike.title} img={projectInfo.hike.image} description = {projectInfo.hike.description} liveSiteUrl = {projectInfo.hike.liveSite} githubUrl={projectInfo.hike.github} skills = {projectInfo.hike.tech}/></div>
-
-                <div><Project title = {projectInfo.uno.title} img={projectInfo.uno.image} description = {projectInfo.uno.description} liveSiteUrl = {projectInfo.uno.liveSite} githubUrl={projectInfo.uno.github} skills = {projectInfo.uno.tech}/></div>
-            </Carousel>
-
-            <Gallery />
+        <div id='carousel'>
+            <ImageGallery items={images} showFullscreenButton={false} showPlayButton={false} renderItem={showInfo} />
         </div>
     )
 }
 
-export default Projects
+export default Gallery
