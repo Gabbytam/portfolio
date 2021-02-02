@@ -3,11 +3,13 @@ import React, {useState} from 'react'
 //import component
 import Intro from '../Intro'
 import Nav from '../common/Nav'
-import Contact from '../Contact'
-import ContactItems from '../ContactItems'
+import Footer from '../common/Footer'
+
+
 
 
 function Layout(props) {
+
     const [show, setShow] = useState(false);
     const [arrow, setArrow] = useState('⤵');
 
@@ -19,9 +21,14 @@ function Layout(props) {
         } else {
             toggle = show === true ? false : true;
         }
-        let arr = arrow === '⤵' ? '⤴' : '⤵';
+        let arr = toggle === true ? '⤴' : '⤵';
+        setTimeout(() => {
+        
         setShow(toggle);
         setArrow(arr);
+
+        }, 200)
+        
     }
 
     return (
@@ -31,15 +38,7 @@ function Layout(props) {
             <div id='body'>
                 {props.children}
             </div>
-
-            <footer id='contact'>
-                {/* <h3>Contact Me</h3> */}
-                <h3 id='contact-header'>Get In Touch With Me <span id='arrow' onClick={() => showForm()}>{arrow}</span></h3>
-                <div id='footer-items' style = {show === true ? {display: ''} : {display: 'none'}}>
-                    <Contact />
-                    <ContactItems />
-                </div>
-            </footer>
+            <Footer showForm = {showForm} show={show} arrow={arrow}/>
         </div>
     )
 }

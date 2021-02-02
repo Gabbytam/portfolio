@@ -90,7 +90,7 @@ function Projects() {
     ];
     return (
         <div id='projects'>
-            <h1 id='projects-header'>Explore My Projects</h1>
+            <h1 id='projects-header' className='animate__animated animate__slideInDown'>Explore My Projects</h1>
             <Carousel responsive={responsive} >
                 <div><Project title = {projectInfo.career.title} img={projectInfo.career.image} description = {projectInfo.career.description} liveSiteUrl = {projectInfo.career.liveSite} githubUrl={projectInfo.career.github} skills = {projectInfo.career.tech}/></div>
                 
