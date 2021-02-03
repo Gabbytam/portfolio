@@ -9,15 +9,13 @@ import { FaPaperPlane } from 'react-icons/fa'
 function Contact() {
     const [message, setMessage] = useState({name: '', email: '', body: ''})
    
-
-
+    //this just sets the message to the current e.target its handle input is being called on. It does not save all info
     const handleInput = (e) => {
         setMessage({[e.target.name]:[e.target.value]})
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(e.target)
 
         emailjs.sendForm(
             'gtam_gmail',

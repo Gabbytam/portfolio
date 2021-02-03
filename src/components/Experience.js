@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence } from 'framer-motion'
 
 function Experience({title, company, date, bullet1, bullet2}) {
     const [clicked, setClicked] = useState(false)
