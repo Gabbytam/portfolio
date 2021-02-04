@@ -24,7 +24,7 @@ function Contact() {
             'user_DgvDS2sih1Gp7DkE3UzcJ'
         )
         .then(
-            console.log('success')
+            //console.log('success')
         )
         .catch(err => {
             console.error('Email error', err)
@@ -47,7 +47,7 @@ function Contact() {
 
                 <button className='btn btn-primary send-button' id='submit' type='submit' value='SEND'>
                     <div className="button">
-                    <FaPaperPlane /><span class='send-text'>SEND</span>
+                    <FaPaperPlane /><span className='send-text'>SEND</span>
                     </div>
                 </button>
             </form> 

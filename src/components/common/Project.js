@@ -3,8 +3,8 @@ import React from 'react'
 function Project({ title, img, description, liveSiteUrl, githubUrl, skills }) {
 
     const displayTech = (skills) => {
-        return skills.map(skill => (
-            <li>
+        return skills.map((skill, i) => (
+            <li key = {i}>
                 {skill}
             </li>
         ))
@@ -33,7 +33,7 @@ function Project({ title, img, description, liveSiteUrl, githubUrl, skills }) {
                 </div>
             </div>
 
-            <img className='project-image' src={img}/>
+            <img className='project-image' src={img} alt = 'project_home_page'/>
             
         </div>
     )

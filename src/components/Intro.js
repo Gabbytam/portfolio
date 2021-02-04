@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react'
 
 // import '../css/stars.css'
-import { motion, AnimatePresence } from 'framer-motion'
+//import { motion} from 'framer-motion'
+import { motion} from "framer-motion"
+
 
 function Intro() {
 
@@ -19,16 +21,20 @@ function Intro() {
     //function that will periodically swap out words
     const changeDescriptor = () => {
         let others = ['debugging', 'problem solving', 'analytical thinking', 'group work', 'learning', 'building projects'];
-            delay = setTimeout(() => {
-
-                setDescriptor(others[index])
-                if(index < others.length - 1 ) {
-                    let newIndex = index + 1;
-                    setIndex(newIndex);
-                } else {
-                    setIndex(0);
-                }
-            }, 2000)
+        //have a setTimeout to change through the array of words, circle back if at the end of array
+        delay = setTimeout(() => {
+            //also change the show to be false at the end inside the setTimeout
+            
+            
+            if(index < others.length - 1 ) {
+                let newIndex = index + 1;
+                setIndex(newIndex);
+            } else {
+                setIndex(0);
+            }
+            setDescriptor(others[index])
+            
+        }, 2000)
     }
 
     //function that will stop the words from changing when its clicked 
@@ -56,6 +62,7 @@ function Intro() {
         }
     }
 
+
     return (
         <div id='intro'>
             <div id='background'></div>
@@ -67,7 +74,9 @@ function Intro() {
 
             <motion.div id='intro-right' variants={variantsR} initial='start' animate='finish'>
                 <p id='intro-text' onClick = {stopChangeDescriptor}>I am a software engineer who loves </p>
+                
                 <p id='descriptor'><span className='intro-name'>{descriptor}</span>.</p>
+                
             </motion.div>
             
         </div>

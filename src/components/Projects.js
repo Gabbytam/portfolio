@@ -1,7 +1,6 @@
 import React from 'react'
 
 
-
 //component import
 import Project from '../components/common/Project'
 import Gallery from '../components/Gallery'
@@ -36,7 +35,7 @@ function Projects() {
     const projectInfo = {
         uno: {
             title: 'UNO',
-            image: '/images/projects/uno.png',
+            image: '/images/projects/uno1.png',
             liveSite: 'https://gabbytam.github.io/project_UNO_game/',
             github: 'https://github.com/Gabbytam/project_UNO_game',
             description: 'Front end online version of the very famous card game, UNO. With a focus on DOM manipulation, users are able to make decisions with clicks and have the game unfold before them. Mimicked game functionality includes deck shuffling, playing cards, drawing cards, wild card choice handling, win logic, and play again.',
@@ -44,8 +43,7 @@ function Projects() {
         },
         hike: {
             title: 'HIK3 WASHIN6TON TRAIL5',
-            // image: '/images/projects/hike.png',
-            image: '/images/projects/hikehome.png',
+            image: '/images/projects/hike1.png',
             liveSite: 'https://hike-washington-trails-365.herokuapp.com/',
             github: 'https://github.com/Gabbytam/hike_washington_trails_365',
             description: 'Back end project designed to show a library of hikes in Washington state separated by which season they are best suited for so that hikers can enjoy the outdoors year round. This web application allowed users to create an account to save and blog about hikes as well as view a personalized seasonal calendar.',
@@ -53,7 +51,7 @@ function Projects() {
         },
         career: {
           title: '.find(career)',
-          image: '/images/projects/project3.png',
+          image: '/images/projects/career1.JPEG',
           liveSite: 'https://findcareer.surge.sh/',
           github: 'https://github.com/orgs/SFX818/teams/charoniles-angels/repositories',
           description: 'Group collaboration to create a full-stack web application that helps prospective software engineers in their job search. This app allows users to search for available jobs and keep track of the status of jobs saved. It also offers a way for users to keep track of the network they build, goals they set, and offers a notes section.',

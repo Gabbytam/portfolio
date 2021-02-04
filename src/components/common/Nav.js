@@ -2,9 +2,21 @@ import React from 'react'
 
 import { HashLink as Link } from 'react-router-hash-link';
 
+import { motion} from 'framer-motion'
+
 function Nav({showForm}) {
+
+    const variants = {
+        start: { opacity: 0 },
+        finish: { opacity: 1,
+            transition: {
+                duration: 3
+            }
+        }
+    }
+
     return (
-        <nav>
+        <motion.nav variants={variants} initial='start' animate='finish'>
             <div id='nav-content'>
                 <div>
                     <Link to='#intro' id='nav-left'>
@@ -21,7 +33,7 @@ function Nav({showForm}) {
                     <Link to ='#contact' className='nav-item' onClick = {()=> {showForm(true)}}>Contact</Link>
                 </div>
             </div>
-        </nav>
+        </motion.nav>
     )
 }
 
