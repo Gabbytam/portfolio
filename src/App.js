@@ -17,7 +17,6 @@ import Nav from './components/common/Nav'
 // CSS imports
 import "./css/App.css";
 
-
 const App = () => {
   return (
     <div className="App">

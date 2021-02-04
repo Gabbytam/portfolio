@@ -15,14 +15,14 @@ function About() {
                <div className='about-info'>
                 <h3>BESIDES DEVELOPING</h3>
                 <p className='about-text'>
-                When I am not coding it is likely I'm out hiking. I have also made a hobby out of weightlifting and on days where I chose non-physical activity, I turn to cross-stitching. As I am still young, I have used my time to try out life in different locations! In the past calendar year I have lived in Northern California, New York City, Seattle, and Honolulu. I have grown a passion for road tripping and along the way, gotten into landscape photography. 
+                When I am not coding it is likely I'm out <b>hiking</b>. I have also made a hobby out of strength training and on days where I chose non-physical activity, I turn to crafting. As I am still young, I have used my time to try out <b>life in different locations</b>! In the past calendar year I have lived in Northern California, New York City, Seattle, and Honolulu. I have grown a passion for <b>road tripping</b> and along the way, gotten into landscape <b>photography</b>. 
                 </p>
                </div>
 
                <div className='about-info'>
                 <h3>AND WHAT I HOPE TO DO</h3>
                 <p className='about-text'> 
-                I hope to find a position where I can feel fulfilled and be proud of the work I produce FOR the company. I hope to spend the first few years getting hard coding experience under my belt. I also hope to keep learning under...... Somewhere down the line I think I would really enjoy being a Developer Advocate.....
+                I hope to find a position where I can feel fulfilled and be proud of the work I produce for a company. I hope to spend the first few years getting hard coding experience under my belt and <b>expanding my knowledge</b> by learning from my team. Somewhere down the line I think I would really enjoy being a <b>Developer Advocate</b>.
                 </p>
 
                </div>

@@ -8,6 +8,7 @@ function Intro() {
     const [descriptor, setDescriptor] = useState('building projects');
     const [index, setIndex] = useState(0);
 
+    //pass in index so everytime index changes the function is run, keeps it on a loop
     useEffect(() => {
         changeDescriptor();
     }, [index])
@@ -15,6 +16,7 @@ function Intro() {
 
     let delay; 
 
+    //function that will periodically swap out words
     const changeDescriptor = () => {
         let others = ['debugging', 'problem solving', 'analytical thinking', 'group work', 'learning', 'building projects'];
             delay = setTimeout(() => {
@@ -29,8 +31,29 @@ function Intro() {
             }, 2000)
     }
 
+    //function that will stop the words from changing when its clicked 
     const stopChangeDescriptor = () => {
         clearTimeout(delay)
+    }
+
+    const variantsR = {
+        start: { x: 1000 },
+        finish: { x: 0,
+            transition: {
+                type: 'spring',
+                duration: 3
+            }
+        }
+    }
+
+    const variantsL = {
+        start: { x: -1000 },
+        finish: { x: 0,
+            transition: {
+                type: 'spring',
+                duration: 3
+            }
+        }
     }
 
     return (
@@ -38,15 +61,14 @@ function Intro() {
             <div id='background'></div>
             <div id='midground'></div>
             <div id='foreground'></div>
-            <div id='intro-left'>
+            <motion.div id='intro-left' variants={variantsL} initial='start' animate='finish'>
                 <h1>Hi, I'm <span className='intro-name'>Gabrielle Tam</span> and welcome to my portfolio.</h1>
+            </motion.div>
 
-            </div>
-
-            <div id='intro-right'>
+            <motion.div id='intro-right' variants={variantsR} initial='start' animate='finish'>
                 <p id='intro-text' onClick = {stopChangeDescriptor}>I am a software engineer who loves </p>
                 <p id='descriptor'><span className='intro-name'>{descriptor}</span>.</p>
-            </div>
+            </motion.div>
             
         </div>
     )

@@ -22,13 +22,8 @@ function Layout(props) {
             toggle = show === true ? false : true;
         }
         let arr = toggle === true ? '⤴' : '⤵';
-        setTimeout(() => {
-        
         setShow(toggle);
         setArrow(arr);
-
-        }, 200)
-        
     }
 
     return (

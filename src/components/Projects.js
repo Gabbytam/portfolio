@@ -75,7 +75,7 @@ function Projects() {
                 <div><Project title = {projectInfo.uno.title} img={projectInfo.uno.image} description = {projectInfo.uno.description} liveSiteUrl = {projectInfo.uno.liveSite} githubUrl={projectInfo.uno.github} skills = {projectInfo.uno.tech}/></div>
             </Carousel>
 
-            <Gallery />
+            {/* <Gallery /> */}
         </div>
     )
 }

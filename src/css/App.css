@@ -1,5 +1,9 @@
 @import "~react-image-gallery/styles/css/image-gallery.css";
 
+html {
+  scroll-behavior: smooth;
+}
+
 .App {
   text-align: center;
 }
@@ -28,8 +32,8 @@ body {
   height: 100vh;
 }
 
-#name {
-  color: black;
+.intro-name {
+  color: rgb(255, 196, 142);
 }
 
 #home {
@@ -62,10 +66,9 @@ nav {
   height: 7vw;
   width: 100%;
   position: fixed;
-  /* margin-bottom: 5vw; */
   z-index: 1;
   background-image: url(../css/images/mine/mt2.jpg);
-  background-position-y: 10%;
+  background-position-y: 5%;
   background-size: cover;
   
 }
@@ -194,6 +197,12 @@ footer {
 .devicon-git-plain {
   max-width: 3em;
   margin: 0 .5em 0 .5em;
+  transition: all .2s ease-in-out;
+}
+
+
+.devicon-git-plain:hover {
+  transform: scale(1.5); 
 }
 
 /* if you want to change the original color
@@ -210,7 +219,7 @@ footer {
   width: 90%;
 }
 
-#resume-div, #skills-div, #experience-div, #edu-div  {
+ #skills-div, #experience-div, #edu-div  {
   display: flex;
   flex-direction: column;
 }
@@ -234,22 +243,26 @@ footer {
 
 #intro-right {
   width: 40%;
+  display: flex;
+  flex-direction: column;
+  
 }
 
 /* BUTTON STYLING */
 #site-links button {
-  color: #1D9AF2;
-  background-color: #292D3E;
-  border: 1px solid #1D9AF2;
+  color: #ffffff;
+  background-color: rgb(66, 81, 102);
+  border: 1px solid rgb(10, 4, 3);
   border-radius: 4px;
   padding: 0 15px;
   cursor: pointer;
   height:32px;
   font-size:14px;
   transition: all 0.2s ease-in-out;
+  margin: 0 .2em 0 .2em;
   }
   #site-links button:hover {
-  box-shadow: 1px 1px #53a7ea, 2px 2px #53a7ea, 3px 3px #53a7ea;
+  box-shadow: 1px 1px rgb(25, 37, 54), 2px 2px rgb(25, 37, 54), 3px 3px rgb(25, 37, 54);
   transform: translateX(-3px);
   }
 
@@ -257,16 +270,17 @@ footer {
 /* PROJECT COMPONENT STYLING  */
 #projects {
   width: 95%;
+  margin-bottom: 0;
 }
 
-.project-image:hover {
-  opacity: 0.3;
-}
+/* .project-image:hover {
+  opacity: 0.0;
+} */
 
 
 .react-multi-carousel-list li {
-  margin: 0 1vw 0 1vw;
-  width: 100%;
+  margin: 0 .3vw 0 .3vw;
+  /* width: 100%; */
 }
 
 #project-component {
@@ -274,6 +288,20 @@ footer {
   height: 100%;
   background:rgba(255, 255, 255, 0.156);
   background-size: cover; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#project-component:hover img {
+  /* opacity: 0.0; */
+  filter: blur(10px) invert(30%);
+  /* filter: blur(10px); */
+}
+
+#project-component:hover .project-info {
+  z-index: 1;
+  visibility: visible;
 }
 
 .job-title {
@@ -293,10 +321,14 @@ footer {
 .project-info {
   width: 90%;
   height: 90%;
-  background: pink;
   position: absolute;
-  z-index: -1;
-  display: none;
+  visibility: hidden;
+  overflow: scroll;
+  /* color: black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -307,10 +339,12 @@ footer {
 #tech li {
   border-radius: 20px;
   list-style-position:inside;
-  border: 3px solid rgb(255, 197, 73);
-  background: rgb(255, 215, 128);
+  border: 3px solid rgb(255, 174, 98);
+  background: rgb(255, 196, 142);
   padding: .5em .5em .5em .5em;
   list-style-type: none;
+  margin-bottom: 1em;
+  color: white;
 }
 
 
@@ -329,6 +363,7 @@ footer {
 
 #projects-header {
   text-align: left;
+  margin-bottom: 3vh;
 }
 
 #contact-header {
@@ -338,7 +373,13 @@ footer {
 
 #intro-text {
   font-size: 1em;
+  margin-bottom: .2em;
 }
+
+#descriptor {
+  margin-top: .2em;
+}
+
 
 /* !!!!! contact form styling */
 /* some parts taken from: https://codepen.io/bobbykorec/pen/qOGbyr */
@@ -530,4 +571,39 @@ input {
 hr {
   width: 100%;
   border-color: rgba(255,255,255,.8);
+}
+
+
+/* !!!!glow hover styling */
+
+#download-resume {
+  /* transform: translate(-50%,-50%); */
+  transition: 0.5s;
+  border-radius: 20px;
+  text-decoration: none;
+  color:rgb(252, 196, 156);
+  padding: .2em;
+
+}
+
+#download-resume:hover {
+    background: white;
+    background: rgb(252, 196, 156);
+    color: white;
+    /* box-shadow: 0 0 10px rgba(255,255,255,1),
+                0 0 20px rgba(255,255,255,1),
+                0 0 30px rgba(255,255,255,1),
+                0 0 0 75px rgba(255,255,255,0.05),
+                0 0 0 60px rgba(255,255,255,0.05),
+                0 0 0 45px rgba(255,255,255,0.05),
+                0 0 0 30px rgba(255,255,255,0.05),
+                0 0 0 15px rgba(255,255,255,0.05); */
+      box-shadow: 0 0 .5em rgba(255,255,255,1),
+                0 0 1em rgba(255,255,255,1),
+                0 0 1.5em rgba(255,255,255,1),
+                0 0 0 2.5em rgba(255,255,255,0.05),
+                0 0 0 2em rgba(255,255,255,0.05),
+                0 0 0 1.5em rgba(255,255,255,0.05),
+                0 0 0 1em rgba(255,255,255,0.05),
+                0 0 0 .5em rgba(255,255,255,0.05);
 }

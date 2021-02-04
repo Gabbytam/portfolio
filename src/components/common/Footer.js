@@ -24,7 +24,12 @@ function Footer({show, arrow, showForm}) {
                 duration: 2
             }
         },
-        exit: {opacity: 0, y: -100}
+        exit: {opacity: 0,
+             y: -100,
+            transition: {
+                type: 'spring',
+                duration: 5
+            }}
     }
 
     return (

@@ -51,9 +51,9 @@ function Resume() {
     return (
         <div id='resume-container'>
             <h1>Resume</h1>
-            <div id='resume-div'>
-                <h3>Click To Download Resume</h3>
-            </div>
+            {/* <div id='resume-div'> */}
+                <a id='download-resume' href='/files/GabrielleTam.pdf' download>Click to Download Resume</a>
+            {/* </div> */}
 
             <div id='skills-div'>
                 <h3 className='resume-header'>Tech Stack</h3>

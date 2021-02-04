@@ -1,8 +1,6 @@
-
-
-@keyframes STAR-MOVE1 {
+@keyframes STAR-MOVE {
 	from {
-        top: 0;
+		top: 0;
 	}
 	to { 
         top: -2000px;
@@ -10,7 +8,8 @@
 }
 
 #background {
-  background: url(../css/images/stars/midground.png) repeat 5% 5%;
+	max-height: 100%;
+  	background: url(../css/images/stars/midground.png) repeat 5% 5%;
 	position: absolute;
 	top: 0; left: 0; right: 0; bottom: 0;
 	z-index: -100;
@@ -22,7 +21,7 @@
 }
 
 #midground {
-
+	max-height: 100%;
 	background: url(../css/images/stars/midground.png) repeat 20% 20%;
 	position: absolute;
 	top: 0; left: 0; right: 0; bottom: 0;
@@ -35,6 +34,7 @@
 }
 
 #foreground {
+	max-height: 100%;
     background: url(../css/images/stars/foreground.png) repeat 35% 35%;
 	position: absolute;
 	top: 0; left: 0; right: 0; bottom: 0;
