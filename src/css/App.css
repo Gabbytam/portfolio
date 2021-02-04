@@ -43,7 +43,7 @@ body {
   align-items: center;
 }
 
-#about, #projects, #resume-container {
+#about, #projects, #resume {
   margin: 10vh 0 10vh 0;
   padding-top: 10vh;
   /* margin-top: 10vh; */
@@ -215,7 +215,7 @@ footer {
   margin-bottom: -1em;
 }
 
-#resume-container {
+#resume {
   width: 90%;
 }
 

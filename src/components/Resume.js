@@ -49,7 +49,7 @@ function Resume() {
     }
 
     return (
-        <div id='resume-container'>
+        <div id='resume'>
             <h1>Resume</h1>
             {/* <div id='resume-div'> */}
                 <a id='download-resume' href='/files/GabrielleTam.pdf' download>Click to Download Resume</a>

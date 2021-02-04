@@ -29,7 +29,7 @@ function Nav({showForm}) {
                 <div id='nav-right'>
                     <Link to='#about' className='nav-item'>About Me</Link>
                     <Link to='#projects' className='nav-item'>Projects</Link>
-                    <Link to='#resume-container' className='nav-item'>Resume</Link>
+                    <Link to='#resume' className='nav-item'>Resume</Link>
                     <Link to ='#contact' className='nav-item' onClick = {()=> {showForm(true)}}>Contact</Link>
                 </div>
             </div>
